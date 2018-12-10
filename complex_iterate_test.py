@@ -34,30 +34,35 @@ class TestIterate(unittest.TestCase):
     """
     Unit Test cases for the do_iterate(..)
     """
+    #here is _a
     def test_do_iteration_a(self):
         num = 1 + 1j
         seed = 2 + 3j
         result = do_iteration(num, seed)
         print(result)
         self.assertEqual(result, 1)
+        #hereb
     def test_do_iteration_b(self):
         num = .8 +.5j
         c = -.5 + 0.06j
         result = do_iteration(num, c)
         print(result)
         self.assertEqual(result, 8)
+        #here _c
     def test_do_iteration_c(self):
         num = 1 + -.1j
         c = -0.7269+0.1889j
         result = do_iteration(num, c)
         print(result)
         self.assertEqual(result, 136)
+        #here _d
     def test_do_iteration_d(self):
         num = 1
         c = 0.285 + 0.01j
         result = do_iteration(num, c)
         print(result)
         self.assertEqual(result, 3)
+        #here _e
     def test_do_iteration_e(self):
         num = -.21 + .01j
         c = 0.1285 + 0.01j

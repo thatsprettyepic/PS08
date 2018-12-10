@@ -1,12 +1,5 @@
-"""
-Problem Set 8 Complex Number Iterations
-NAME : {enter your name here}
-
-complete the code for the functions below
-
-
-"""
 import os
+
 
 def do_calculation(complex_num, complex_seed):
     """
@@ -17,7 +10,10 @@ def do_calculation(complex_num, complex_seed):
 
     Then return the new complex number
     """
-    return 0
+    print ("new_complex_seed")
+    return complex_num **2 + complex_seed
+
+
 
 def do_iteration(complex_num, complex_seed):
     """
@@ -35,4 +31,11 @@ def do_iteration(complex_num, complex_seed):
 
     When this has completed, return the number of iterations that executed
     """
-    return 0
+    for i in range(255):
+        complexer_num = do_calculation(complex_num , complex_seed)
+        complex_num = complexer_num
+        if abs(complexer_num) > 2:
+            print ("MORE THAN 2 UNITS")
+            break
+    print (i)
+    return i
